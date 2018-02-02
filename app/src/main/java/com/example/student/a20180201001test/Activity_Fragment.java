@@ -28,6 +28,13 @@ public class Activity_Fragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static Activity_Fragment newInstance(int sectionNumber) {
+        Activity_Fragment fragment = new Activity_Fragment();
+        Bundle args = new Bundle();
+        args.putInt("section_number", sectionNumber);
+        fragment.setArguments(args);
+        return fragment;
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
